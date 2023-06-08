@@ -36,6 +36,7 @@ body {
   display: none;
 }
 .wrapper .hero-image img {
+  padding: 0.5em 0;
   width: 100%;
 }
 .wrapper .site-description-section {
@@ -56,11 +57,25 @@ body {
   font-weight: 500;
 }
 .wrapper .site-description-section .learn-more-btn {
-  margin: 2em;
-  padding: 0.8em 1.6em;
+  margin: 1em;
+  padding: 0.7em 1.4em;
   font-size: 1.8rem;
   color: hsl(0, 0%, 98%);
   background-color: hsl(0, 0%, 8%);
   border-radius: 15px;
   cursor: pointer;
+}
+.wrapper .logos-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .logos-section .section-logo {
+  width: 26%;
+  padding: 1em 0.5em;
+}
+.wrapper .attribution {
+  padding: 1em;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

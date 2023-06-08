@@ -43,6 +43,7 @@ body {
 
     .hero-image {
         img {
+            padding: .5em 0;
             width: 100%;
         }
     }
@@ -67,8 +68,8 @@ body {
         }
 
         .learn-more-btn {
-            margin: 2em;
-            padding: .8em 1.6em;
+            margin: 1em;
+            padding: .7em 1.4em;
             font-size: 1.8rem;
             color: $almost-white;
             background-color: $almost-black;
@@ -76,6 +77,24 @@ body {
             cursor: pointer;
         }
     }
+
+    .logos-section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .section-logo {
+            width: 26%;
+            padding: 1em .5em;
+        }
+    }
+
+    .attribution {
+        padding: 1em;
+        text-align: center;
+    }
+    
 }
 
 
