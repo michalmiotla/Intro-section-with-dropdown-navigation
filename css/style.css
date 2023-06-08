@@ -12,6 +12,7 @@ body {
   font-family: "Epilogue", sans-serif;
   font-size: 1.8rem;
   background-color: hsl(0, 0%, 41%);
+  overflow: hidden;
 }
 
 .wrapper {
@@ -29,8 +30,61 @@ body {
   justify-content: space-between;
   padding: 1em 1em;
 }
+.wrapper .logo-and-nav .burger-icon {
+  cursor: pointer;
+  z-index: 100;
+}
+.wrapper .show {
+  transform: translateX(-500px);
+}
 .wrapper .mobile-navigation {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: -500px;
+  height: 100%;
+  width: 14em;
+  background-color: hsl(0, 0%, 98%);
+  transition: transform 0.3s;
+}
+.wrapper .mobile-navigation .navbar {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 4em;
+  font-size: 1.6rem;
+}
+.wrapper .mobile-navigation .navbar a {
+  padding: 1em 3em 0.5em 2em;
+  color: hsl(0, 0%, 41%);
+  text-decoration: none;
+  font-family: "Epilogue", sans-serif;
+}
+.wrapper .mobile-navigation .navbar .features,
+.wrapper .mobile-navigation .navbar .company {
   display: none;
+  flex-direction: column;
+  padding: 0.5em 1.5em;
+}
+.wrapper .mobile-navigation .login {
+  position: relative;
+  top: 5.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper .mobile-navigation .login button {
+  font-size: 1.4rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: hsl(0, 0%, 41%);
+  padding: 1em 5em;
+  border-radius: 15px;
+  font-family: "Epilogue", sans-serif;
+}
+.wrapper .mobile-navigation .login button:last-child {
+  border: 1px solid hsl(0, 0%, 8%);
 }
 .wrapper .desktop-navigation {
   display: none;

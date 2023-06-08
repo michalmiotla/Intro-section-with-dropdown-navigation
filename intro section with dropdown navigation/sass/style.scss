@@ -16,85 +16,145 @@ body {
 	font-family: 'Epilogue', sans-serif;
 	font-size: 1.8rem;
 	background-color: $medium-gray;
+	overflow: hidden;
 }
 
 .wrapper {
-    position: relative;
-    margin: 0 auto;
-    width: 100%;
-    min-width: 375px;
-    max-width: 1440px;
-    display: flex;
-    flex-direction: column;
-    background-color: $almost-white;
+	position: relative;
+	margin: 0 auto;
+	width: 100%;
+	min-width: 375px;
+	max-width: 1440px;
+	display: flex;
+	flex-direction: column;
+	background-color: $almost-white;
 
-    .logo-and-nav {
-        display: flex;
-        justify-content: space-between;
-        padding: 1em 1em;
-    }
+	.logo-and-nav {
+		display: flex;
+		justify-content: space-between;
+		padding: 1em 1em;
 
-    .mobile-navigation {
-        display: none;
-    }
-    .desktop-navigation {
-        display: none;
-    }
-
-    .hero-image {
-        img {
-            padding: .5em 0;
-            width: 100%;
-        }
-    }
-
-    .site-description-section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        .title {
-            padding: 1em 0;
-        }
-
-        .text {
-            padding: 0 1em;
-            font-size: 1.6rem;
-            line-height: 1.5;
-            color: $medium-gray;
-            font-weight: 500;
-        }
-
-        .learn-more-btn {
-            margin: 1em;
-            padding: .7em 1.4em;
-            font-size: 1.8rem;
-            color: $almost-white;
-            background-color: $almost-black;
-            border-radius: 15px;
+        .burger-icon {
             cursor: pointer;
+            z-index: 100;
         }
-    }
+	}
 
-    .logos-section {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+	.show {
+		transform: translateX(-500px);
+	}
 
-        .section-logo {
-            width: 26%;
-            padding: 1em .5em;
-        }
-    }
+	.mobile-navigation {
+		display: flex;
+		flex-direction: column;
+		position: absolute;
+		right: -500px;
+		height: 100%;
+        width: 14em;
+		background-color: $almost-white;
+		transition: transform 0.3s;
 
-    .attribution {
-        padding: 1em;
-        text-align: center;
-    }
-    
+		.navbar {
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			top: 4em;
+            font-size: 1.6rem;
+
+			a {
+				padding: 1em 3em 0.5em 2em;
+				color: $medium-gray;
+				text-decoration: none;
+				font-family: 'Epilogue', sans-serif;
+			}
+
+			.features,
+			.company {
+				display: none;
+				flex-direction: column;
+				padding: 0.5em 1.5em;
+			}
+		}
+
+		.login {
+			position: relative;
+			top: 5.5em;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+
+			button {
+				font-size: 1.4rem;
+				background: none;
+				border: none;
+				cursor: pointer;
+				color: $medium-gray;
+				padding: 1em 5em;
+				border-radius: 15px;
+				font-family: 'Epilogue', sans-serif;
+			}
+
+			button:last-child {
+				border: 1px solid $almost-black;
+			}
+		}
+	}
+
+	.desktop-navigation {
+		display: none;
+	}
+
+	.hero-image {
+		img {
+			padding: 0.5em 0;
+			width: 100%;
+		}
+	}
+
+	.site-description-section {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		.title {
+			padding: 1em 0;
+		}
+
+		.text {
+			padding: 0 1em;
+			font-size: 1.6rem;
+			line-height: 1.5;
+			color: $medium-gray;
+			font-weight: 500;
+		}
+
+		.learn-more-btn {
+			margin: 1em;
+			padding: 0.7em 1.4em;
+			font-size: 1.8rem;
+			color: $almost-white;
+			background-color: $almost-black;
+			border-radius: 15px;
+			cursor: pointer;
+		}
+	}
+
+	.logos-section {
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		.section-logo {
+			width: 26%;
+			padding: 1em 0.5em;
+		}
+	}
+
+	.attribution {
+		padding: 1em;
+		text-align: center;
+	}
 }
-
-
