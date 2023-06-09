@@ -136,28 +136,38 @@ body {
 .wrapper .desktop-navigation .login-desktop button:last-child {
   border: 1px solid hsl(0, 0%, 8%);
 }
-.wrapper .hero-image img {
-  padding: 0.5em 0;
-  width: 100%;
+.wrapper .site-structure {
+  position: relative;
 }
-.wrapper .site-description-section {
+.wrapper .site-structure .hero-image {
+  position: relative;
+  height: 500px;
+  width: 500px;
+}
+.wrapper .site-structure .hero-image .hero-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../images/image-hero-mobile.png);
+}
+.wrapper .site-structure .site-description-section {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.wrapper .site-description-section .title {
+.wrapper .site-structure .site-description-section .title {
   padding: 1em 0;
 }
-.wrapper .site-description-section .text {
+.wrapper .site-structure .site-description-section .text {
   padding: 0 1em;
   font-size: 1.6rem;
   line-height: 1.5;
   color: hsl(0, 0%, 41%);
   font-weight: 500;
 }
-.wrapper .site-description-section .learn-more-btn {
+.wrapper .site-structure .site-description-section .learn-more-btn {
   margin: 1em;
   padding: 0.7em 1.4em;
   font-size: 1.8rem;
@@ -166,13 +176,13 @@ body {
   border-radius: 15px;
   cursor: pointer;
 }
-.wrapper .logos-section {
+.wrapper .site-structure .site-description-section .logos-section {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.wrapper .logos-section .section-logo {
+.wrapper .site-structure .site-description-section .logos-section .section-logo {
   width: 26%;
   padding: 1em 0.5em;
 }
@@ -193,5 +203,54 @@ body {
   }
   .wrapper .desktop-navigation {
     display: flex;
+  }
+  .wrapper .desktop-navigation .navbar-desktop .features-desktop {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 4.5em;
+    left: -3em;
+    padding: 1em 2em;
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: 0px 0px 15px hsl(0, 0%, 41%);
+    border-radius: 10px;
+  }
+  .wrapper .desktop-navigation .navbar-desktop .features-desktop a {
+    padding: 0.5em 0;
+  }
+  .wrapper .desktop-navigation .navbar-desktop .company-desktop {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    top: 4.5em;
+    left: 9em;
+    padding: 1em 2em;
+    background-color: hsl(0, 0%, 98%);
+    box-shadow: 0px 0px 15px hsl(0, 0%, 41%);
+    border-radius: 10px;
+  }
+  .wrapper .desktop-navigation .navbar-desktop .company-desktop a {
+    padding: 0.5em 0;
+  }
+  .wrapper .site-structure {
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+  .wrapper .site-structure .hero-image {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .wrapper .site-structure .site-description-section {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    display: flex;
+    align-items: flex-start;
+    margin-left: 4em;
+  }
+  .wrapper .site-structure .site-description-section .title {
+    text-align: left;
+    font-size: 7rem;
   }
 }/*# sourceMappingURL=style.css.map */
