@@ -12,7 +12,6 @@ body {
   font-family: "Epilogue", sans-serif;
   font-size: 1.8rem;
   background-color: hsl(0, 0%, 41%);
-  overflow: hidden;
 }
 
 .wrapper {
@@ -24,6 +23,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 98%);
+  overflow: hidden;
 }
 .wrapper .logo-and-nav {
   display: flex;
@@ -88,6 +88,53 @@ body {
 }
 .wrapper .desktop-navigation {
   display: none;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.wrapper .desktop-navigation .navbar-desktop {
+  display: flex;
+  position: relative;
+  justify-content: flex-start;
+  align-items: center;
+  width: 70%;
+  padding: 0.5em;
+  top: 0;
+  left: 12em;
+  height: 100px;
+}
+.wrapper .desktop-navigation .navbar-desktop a {
+  text-decoration: none;
+  padding: 0 1em;
+  color: hsl(0, 0%, 41%);
+}
+.wrapper .desktop-navigation .navbar-desktop .features-desktop,
+.wrapper .desktop-navigation .navbar-desktop .company-desktop {
+  display: none;
+}
+.wrapper .desktop-navigation .login-desktop {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 25%;
+  top: 0;
+  right: 0;
+  height: 100px;
+}
+.wrapper .desktop-navigation .login-desktop button {
+  font-size: 1.4rem;
+  height: 3em;
+  padding: 0 1.5em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: hsl(0, 0%, 41%);
+  border-radius: 15px;
+  font-family: "Epilogue", sans-serif;
+}
+.wrapper .desktop-navigation .login-desktop button:last-child {
+  border: 1px solid hsl(0, 0%, 8%);
 }
 .wrapper .hero-image img {
   padding: 0.5em 0;
@@ -132,4 +179,19 @@ body {
 .wrapper .attribution {
   padding: 1em;
   text-align: center;
+}
+
+@media (min-width: 992px) {
+  .wrapper .logo-and-nav .logo-dev {
+    padding: 1em;
+  }
+  .wrapper .logo-and-nav .logo-dev .site-logo {
+    height: 2em;
+  }
+  .wrapper .logo-and-nav .burger-icon {
+    display: none;
+  }
+  .wrapper .desktop-navigation {
+    display: flex;
+  }
 }/*# sourceMappingURL=style.css.map */

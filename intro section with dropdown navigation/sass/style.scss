@@ -16,7 +16,6 @@ body {
 	font-family: 'Epilogue', sans-serif;
 	font-size: 1.8rem;
 	background-color: $medium-gray;
-	overflow: hidden;
 }
 
 .wrapper {
@@ -28,16 +27,17 @@ body {
 	display: flex;
 	flex-direction: column;
 	background-color: $almost-white;
+	overflow: hidden;
 
 	.logo-and-nav {
 		display: flex;
 		justify-content: space-between;
 		padding: 1em 1em;
 
-        .burger-icon {
-            cursor: pointer;
-            z-index: 100;
-        }
+		.burger-icon {
+			cursor: pointer;
+			z-index: 100;
+		}
 	}
 
 	.show {
@@ -50,7 +50,7 @@ body {
 		position: absolute;
 		right: -500px;
 		height: 100%;
-        width: 14em;
+		width: 14em;
 		background-color: $almost-white;
 		transition: transform 0.3s;
 
@@ -59,7 +59,7 @@ body {
 			flex-direction: column;
 			position: relative;
 			top: 4em;
-            font-size: 1.6rem;
+			font-size: 1.6rem;
 
 			a {
 				padding: 1em 3em 0.5em 2em;
@@ -102,6 +102,59 @@ body {
 
 	.desktop-navigation {
 		display: none;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+		.navbar-desktop {
+			display: flex;
+			position: relative;
+			justify-content: flex-start;
+			align-items: center;
+			width: 70%;
+			padding: 0.5em;
+			top: 0;
+			left: 12em;
+			height: 100px;
+
+			a {
+				text-decoration: none;
+				padding: 0 1em;
+				color: $medium-gray;
+			}
+
+			.features-desktop,
+			.company-desktop {
+				display: none;
+			}
+		}
+
+		.login-desktop {
+			position: relative;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			width: 25%;
+			top: 0;
+			right: 0;
+			height: 100px;
+
+			button {
+				font-size: 1.4rem;
+				height: 3em;
+				padding: 0 1.5em;
+				background: none;
+				border: none;
+				cursor: pointer;
+				color: $medium-gray;
+				border-radius: 15px;
+				font-family: 'Epilogue', sans-serif;
+			}
+
+			button:last-child {
+				border: 1px solid $almost-black;
+			}
+		}
 	}
 
 	.hero-image {
@@ -156,5 +209,26 @@ body {
 	.attribution {
 		padding: 1em;
 		text-align: center;
+	}
+}
+
+@media (min-width: 992px) {
+	.wrapper {
+		.logo-and-nav {
+			.logo-dev {
+				padding: 1em;
+
+				.site-logo {
+					height: 2em;
+				}
+			}
+			.burger-icon {
+				display: none;
+			}
+		}
+
+		.desktop-navigation {
+			display: flex;
+		}
 	}
 }
