@@ -28,9 +28,11 @@ body {
 .wrapper .logo-and-nav {
   display: flex;
   justify-content: space-between;
-  padding: 1em 1em;
+  padding: 1.5em 1em;
 }
 .wrapper .logo-and-nav .burger-icon {
+  display: block;
+  height: 1em;
   cursor: pointer;
   z-index: 100;
 }
@@ -117,7 +119,7 @@ body {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width: 25%;
+  width: 27%;
   top: 0;
   right: 0;
   height: 100px;
@@ -138,17 +140,17 @@ body {
 }
 .wrapper .site-structure {
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
-.wrapper .site-structure .hero-image {
-  position: relative;
-  height: 500px;
-  width: 500px;
-}
-.wrapper .site-structure .hero-image .hero-img {
-  position: absolute;
+.wrapper .site-structure .hero-img-mobile {
   width: 100%;
-  height: 100%;
-  background-image: url(../images/image-hero-mobile.png);
+}
+.wrapper .site-structure .hero-img-mobile img {
+  width: 100%;
+}
+.wrapper .site-structure .hero-img-desktop {
+  display: none;
 }
 .wrapper .site-structure .site-description-section {
   display: flex;
@@ -193,10 +195,10 @@ body {
 
 @media (min-width: 992px) {
   .wrapper .logo-and-nav .logo-dev {
-    padding: 1em;
+    padding: 0.5em 1em;
   }
   .wrapper .logo-and-nav .logo-dev .site-logo {
-    height: 2em;
+    height: 1.5em;
   }
   .wrapper .logo-and-nav .burger-icon {
     display: none;
@@ -214,6 +216,7 @@ body {
     background-color: hsl(0, 0%, 98%);
     box-shadow: 0px 0px 15px hsl(0, 0%, 41%);
     border-radius: 10px;
+    z-index: 100;
   }
   .wrapper .desktop-navigation .navbar-desktop .features-desktop a {
     padding: 0.5em 0;
@@ -234,11 +237,21 @@ body {
   }
   .wrapper .site-structure {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 50% 50%;
+    margin-bottom: 5em;
   }
-  .wrapper .site-structure .hero-image {
-    grid-column-start: 2;
-    grid-column-end: 3;
+  .wrapper .site-structure .hero-img-mobile {
+    display: none;
+  }
+  .wrapper .site-structure .hero-img-desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper .site-structure .hero-img-desktop img {
+    width: 33vw;
+    min-width: 400px;
+    max-width: 470px;
   }
   .wrapper .site-structure .site-description-section {
     grid-row-start: 1;
@@ -246,11 +259,27 @@ body {
     grid-column-start: 1;
     grid-column-end: 2;
     display: flex;
+    justify-content: center;
     align-items: flex-start;
-    margin-left: 4em;
+    margin-left: 10vw;
   }
   .wrapper .site-structure .site-description-section .title {
     text-align: left;
-    font-size: 7rem;
+    font-size: clamp(4rem, 5vw, 8rem);
+  }
+  .wrapper .site-structure .site-description-section .text {
+    text-align: left;
+    padding: 0;
+    padding-right: 10%;
+  }
+  .wrapper .site-structure .site-description-section .learn-more-btn {
+    margin: 1em 0;
+  }
+  .wrapper .site-structure .site-description-section .logos-section {
+    position: relative;
+    padding-bottom: 0;
+  }
+  .wrapper .site-structure .site-description-section .logos-section .section-logo:first-child {
+    padding-left: 0;
   }
 }/*# sourceMappingURL=style.css.map */
