@@ -32,7 +32,7 @@ body {
 	.logo-and-nav {
 		display: flex;
 		justify-content: space-between;
-		padding: 1.5em 1em;
+		padding: 1.2em 1.2em;
 
 		.burger-icon {
 			display: block;
@@ -55,6 +55,7 @@ body {
 		width: 14em;
 		background-color: $almost-white;
 		transition: transform 0.3s;
+		z-index: 10;
 
 		.navbar {
 			display: flex;
@@ -68,19 +69,29 @@ body {
 				color: $medium-gray;
 				text-decoration: none;
 				font-family: 'Epilogue', sans-serif;
+
+				img {
+					padding: 0 0.5em;
+				}
 			}
 
 			.features,
 			.company {
 				display: none;
 				flex-direction: column;
-				padding: 0.5em 1.5em;
+				align-items: flex-start;
+				padding: 0.5em 1em;
+
+				img {
+					width: 32px;
+					height: 16px;
+				}
 			}
 		}
 
 		.login {
 			position: relative;
-			top: 5.5em;
+			top: 4.7em;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
@@ -114,14 +125,14 @@ body {
 			justify-content: flex-start;
 			align-items: center;
 			width: 70%;
-			padding: 0.5em;
 			top: 0;
-			left: 12em;
-			height: 100px;
+			left: 9.5em;
+			height: 86px;
 
 			a {
+				font-size: 1.5rem;
 				text-decoration: none;
-				padding: 0 1em;
+				padding: 0 1.2em;
 				color: $medium-gray;
 			}
 
@@ -139,12 +150,13 @@ body {
 			width: 27%;
 			top: 0;
 			right: 0;
-			height: 100px;
+			height: 86px;
 
 			button {
 				font-size: 1.4rem;
 				height: 3em;
 				padding: 0 1.5em;
+				margin-left: 1.5em;
 				background: none;
 				border: none;
 				cursor: pointer;
@@ -165,10 +177,13 @@ body {
 		flex-direction: column;
 
 		.hero-img-mobile {
+			display: flex;
+			justify-content: center;
 			width: 100%;
 
 			img {
 				width: 100%;
+				max-width: 40em;
 			}
 		}
 
@@ -184,12 +199,13 @@ body {
 			text-align: center;
 
 			.title {
-				padding: 1em 0;
+				padding: 1.4em 0 0.7em 0;
+				font-size: clamp(3.6rem, 8vw, 6rem);
 			}
 
 			.text {
-				padding: 0 1em;
-				font-size: 1.6rem;
+				padding: 0 1em 0.5em 1em;
+				font-size: clamp(1.6rem, 3vw, 1.9rem);
 				line-height: 1.5;
 				color: $medium-gray;
 				font-weight: 500;
@@ -198,21 +214,24 @@ body {
 			.learn-more-btn {
 				margin: 1em;
 				padding: 0.7em 1.4em;
-				font-size: 1.8rem;
+				font-size: 1.7rem;
+				font-weight: 700;
 				color: $almost-white;
 				background-color: $almost-black;
-				border-radius: 15px;
+				border-radius: 14px;
 				cursor: pointer;
 			}
 
 			.logos-section {
-				width: 100%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				width: 90%;
+				margin: 0.5em 0 3em 0;
 
 				.section-logo {
 					width: 26%;
+					max-width: 10em;
 					padding: 1em 0.5em;
 				}
 			}
@@ -306,13 +325,14 @@ body {
 				grid-column-start: 1;
 				grid-column-end: 2;
 				display: flex;
-				justify-content: center;
 				align-items: flex-start;
-				margin-left: 10vw;
+				margin-left: 9em;
 
 				.title {
+					padding-top: 1.5em;
+					padding-right: 0.2em;
 					text-align: left;
-					font-size: clamp(4rem, 5vw, 8rem);
+					font-size: clamp(4rem, 7vw, 8rem);
 				}
 
 				.text {
@@ -322,12 +342,20 @@ body {
 				}
 
 				.learn-more-btn {
-					margin: 1em 0;
+					font-size: 2rem;
+					margin: 3em 0 4em 0;
 				}
 
 				.logos-section {
 					position: relative;
-					padding-bottom: 0;
+					width: 90%;
+					margin-bottom: 0;
+
+					.section-logo {
+						max-height: 70px;
+						object-fit: contain;
+					}
+
 					.section-logo:first-child {
 						padding-left: 0;
 					}
