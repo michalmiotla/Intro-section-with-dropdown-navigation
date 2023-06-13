@@ -100,54 +100,10 @@ body {
 }
 .wrapper .desktop-navigation {
   display: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
 }
-.wrapper .desktop-navigation .navbar-desktop {
-  display: flex;
-  position: relative;
-  justify-content: flex-start;
-  align-items: center;
-  width: 70%;
-  top: 0;
-  left: 9.5em;
-  height: 86px;
-}
-.wrapper .desktop-navigation .navbar-desktop a {
-  font-size: 1.5rem;
-  text-decoration: none;
-  padding: 0 1.2em;
-  color: hsl(0, 0%, 41%);
-}
-.wrapper .desktop-navigation .navbar-desktop .features-desktop,
-.wrapper .desktop-navigation .navbar-desktop .company-desktop {
+.wrapper .desktop-navigation .features-desktop,
+.wrapper .desktop-navigation .company-desktop {
   display: none;
-}
-.wrapper .desktop-navigation .login-desktop {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 27%;
-  top: 0;
-  right: 0;
-  height: 86px;
-}
-.wrapper .desktop-navigation .login-desktop button {
-  font-size: 1.4rem;
-  height: 3em;
-  padding: 0 1.5em;
-  margin-left: 1.5em;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: hsl(0, 0%, 41%);
-  border-radius: 15px;
-  font-family: "Epilogue", sans-serif;
-}
-.wrapper .desktop-navigation .login-desktop button:last-child {
-  border: 1px solid hsl(0, 0%, 8%);
 }
 .wrapper .site-structure {
   position: relative;
@@ -223,35 +179,84 @@ body {
   }
   .wrapper .desktop-navigation {
     display: flex;
-  }
-  .wrapper .desktop-navigation .navbar-desktop .features-desktop {
     position: absolute;
-    display: none;
+    top: 0;
+    width: 100%;
+  }
+  .wrapper .desktop-navigation .navbar-desktop {
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    width: 70%;
+    top: 0;
+    left: 9.5em;
+    height: 86px;
+  }
+  .wrapper .desktop-navigation .navbar-desktop a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    padding: 0 1.2em;
+    color: hsl(0, 0%, 41%);
+  }
+  .wrapper .desktop-navigation .navbar-desktop a:hover {
+    color: hsl(0, 0%, 8%);
+  }
+  .wrapper .desktop-navigation .navbar-desktop .features-desktop,
+  .wrapper .desktop-navigation .navbar-desktop .company-desktop {
+    position: absolute;
     flex-direction: column;
-    top: 4.5em;
-    left: -3em;
-    padding: 1em 2em;
+    top: 4em;
+    padding: 1em;
     background-color: hsl(0, 0%, 98%);
     box-shadow: 0px 0px 15px hsl(0, 0%, 41%);
     border-radius: 10px;
     z-index: 100;
   }
-  .wrapper .desktop-navigation .navbar-desktop .features-desktop a {
-    padding: 0.5em 0;
-  }
-  .wrapper .desktop-navigation .navbar-desktop .company-desktop {
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    top: 4.5em;
-    left: 9em;
-    padding: 1em 2em;
-    background-color: hsl(0, 0%, 98%);
-    box-shadow: 0px 0px 15px hsl(0, 0%, 41%);
-    border-radius: 10px;
-  }
+  .wrapper .desktop-navigation .navbar-desktop .features-desktop a,
   .wrapper .desktop-navigation .navbar-desktop .company-desktop a {
     padding: 0.5em 0;
+  }
+  .wrapper .desktop-navigation .navbar-desktop .features-desktop {
+    left: -2.5em;
+  }
+  .wrapper .desktop-navigation .navbar-desktop .features-desktop img {
+    padding-right: 1em;
+    width: 24px;
+  }
+  .wrapper .desktop-navigation .navbar-desktop .company-desktop {
+    left: 7.5em;
+  }
+  .wrapper .desktop-navigation .login-desktop {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 27%;
+    top: 0;
+    right: 0;
+    height: 86px;
+  }
+  .wrapper .desktop-navigation .login-desktop button {
+    font-size: 1.4rem;
+    height: 3em;
+    padding: 0 1.5em;
+    margin-left: 1.5em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: hsl(0, 0%, 41%);
+    border-radius: 15px;
+    font-family: "Epilogue", sans-serif;
+  }
+  .wrapper .desktop-navigation .login-desktop button:last-child {
+    border: 1px solid hsl(0, 0%, 41%);
+  }
+  .wrapper .desktop-navigation .login-desktop button:hover {
+    color: hsl(0, 0%, 8%);
+  }
+  .wrapper .desktop-navigation .login-desktop button:last-child:hover {
+    border: 1px solid hsl(0, 0%, 8%);
   }
   .wrapper .site-structure {
     display: grid;
@@ -294,6 +299,11 @@ body {
   .wrapper .site-structure .site-description-section .learn-more-btn {
     font-size: 2rem;
     margin: 3em 0 4em 0;
+    transition: background-color 0.3s;
+  }
+  .wrapper .site-structure .site-description-section .learn-more-btn:hover {
+    background-color: hsl(0, 0%, 98%);
+    color: hsl(0, 0%, 8%);
   }
   .wrapper .site-structure .site-description-section .logos-section {
     position: relative;

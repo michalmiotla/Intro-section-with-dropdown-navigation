@@ -115,59 +115,10 @@ body {
 
 	.desktop-navigation {
 		display: none;
-		position: absolute;
-		top: 0;
-		width: 100%;
 
-		.navbar-desktop {
-			display: flex;
-			position: relative;
-			justify-content: flex-start;
-			align-items: center;
-			width: 70%;
-			top: 0;
-			left: 9.5em;
-			height: 86px;
-
-			a {
-				font-size: 1.5rem;
-				text-decoration: none;
-				padding: 0 1.2em;
-				color: $medium-gray;
-			}
-
-			.features-desktop,
-			.company-desktop {
-				display: none;
-			}
-		}
-
-		.login-desktop {
-			position: relative;
-			display: flex;
-			justify-content: flex-end;
-			align-items: center;
-			width: 27%;
-			top: 0;
-			right: 0;
-			height: 86px;
-
-			button {
-				font-size: 1.4rem;
-				height: 3em;
-				padding: 0 1.5em;
-				margin-left: 1.5em;
-				background: none;
-				border: none;
-				cursor: pointer;
-				color: $medium-gray;
-				border-radius: 15px;
-				font-family: 'Epilogue', sans-serif;
-			}
-
-			button:last-child {
-				border: 1px solid $almost-black;
-			}
+		.features-desktop,
+		.company-desktop {
+			display: none;
 		}
 	}
 
@@ -261,15 +212,37 @@ body {
 
 		.desktop-navigation {
 			display: flex;
+			position: absolute;
+			top: 0;
+			width: 100%;
 
 			.navbar-desktop {
-				.features-desktop {
+				display: flex;
+				position: relative;
+				justify-content: flex-start;
+				align-items: center;
+				width: 70%;
+				top: 0;
+				left: 9.5em;
+				height: 86px;
+
+				a {
+					font-size: 1.5rem;
+					text-decoration: none;
+					padding: 0 1.2em;
+					color: $medium-gray;
+				}
+
+				a:hover {
+					color: $almost-black;
+				}
+
+				.features-desktop,
+				.company-desktop {
 					position: absolute;
-					display: none;
 					flex-direction: column;
-					top: 4.5em;
-					left: -3em;
-					padding: 1em 2em;
+					top: 4em;
+					padding: 1em;
 					background-color: $almost-white;
 					box-shadow: 0px 0px 15px $medium-gray;
 					border-radius: 10px;
@@ -280,20 +253,53 @@ body {
 					}
 				}
 
-				.company-desktop {
-					position: absolute;
-					display: none;
-					flex-direction: column;
-					top: 4.5em;
-					left: 9em;
-					padding: 1em 2em;
-					background-color: $almost-white;
-					box-shadow: 0px 0px 15px $medium-gray;
-					border-radius: 10px;
+				.features-desktop {
+					left: -2.5em;
 
-					a {
-						padding: 0.5em 0;
+					img {
+						padding-right: 1em;
+						width: 24px;
 					}
+				}
+
+				.company-desktop {
+					left: 7.5em;
+				}
+			}
+
+			.login-desktop {
+				position: relative;
+				display: flex;
+				justify-content: flex-end;
+				align-items: center;
+				width: 27%;
+				top: 0;
+				right: 0;
+				height: 86px;
+
+				button {
+					font-size: 1.4rem;
+					height: 3em;
+					padding: 0 1.5em;
+					margin-left: 1.5em;
+					background: none;
+					border: none;
+					cursor: pointer;
+					color: $medium-gray;
+					border-radius: 15px;
+					font-family: 'Epilogue', sans-serif;
+				}
+
+				button:last-child {
+					border: 1px solid $medium-gray;
+				}
+
+				button:hover {
+					color: $almost-black;
+				}
+
+				button:last-child:hover {
+					border: 1px solid $almost-black;
 				}
 			}
 		}
@@ -344,6 +350,12 @@ body {
 				.learn-more-btn {
 					font-size: 2rem;
 					margin: 3em 0 4em 0;
+					transition: background-color .3s;
+				}
+
+				.learn-more-btn:hover {
+					background-color: $almost-white;
+					color: $almost-black;
 				}
 
 				.logos-section {
