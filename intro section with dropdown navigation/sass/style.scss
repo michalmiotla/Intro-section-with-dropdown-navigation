@@ -18,6 +18,10 @@ body {
 	background-color: $medium-gray;
 }
 
+.icon-rotate {
+	transform: rotate(180deg);
+}
+
 .wrapper {
 	position: relative;
 	margin: 0 auto;
@@ -39,6 +43,11 @@ body {
 			height: 1em;
 			cursor: pointer;
 			z-index: 100;
+		}
+
+		.close {
+			display: none;
+			height: 1.5em;
 		}
 	}
 
@@ -198,16 +207,23 @@ body {
 @media (min-width: 992px) {
 	.wrapper {
 		.logo-and-nav {
+
 			.logo-dev {
 				padding: 0.5em 1em;
+
+				.burger-icon {
+					opacity: 0;
+				}
 
 				.site-logo {
 					height: 1.5em;
 				}
 			}
-			.burger-icon {
-				display: none;
-			}
+			
+		}
+
+		.mobile-navigation {
+			display: none;
 		}
 
 		.desktop-navigation {
@@ -350,7 +366,7 @@ body {
 				.learn-more-btn {
 					font-size: 2rem;
 					margin: 3em 0 4em 0;
-					transition: background-color .3s;
+					transition: background-color 0.3s;
 				}
 
 				.learn-more-btn:hover {
