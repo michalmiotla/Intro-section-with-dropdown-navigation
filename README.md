@@ -6,8 +6,8 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/michalmiotla/Intro-section-with-dropdown-navigation)
-- Live Site URL: [Add live site URL here](https://michalmiotla.github.io/Intro-section-with-dropdown-navigation/)
+[Solution URL](https://github.com/michalmiotla/Intro-section-with-dropdown-navigation)
+[Live site URL](https://michalmiotla.github.io/Intro-section-with-dropdown-navigation/)
 ### Built with
 
 - Semantic HTML5 markup
