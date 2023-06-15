@@ -4,17 +4,10 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
 
 ## Overview
 
-### The challenge
-
-Users should be able to:
-
-- View the relevant dropdown menus on desktop and mobile when interacting with the navigation links
-- View the optimal layout for the content depending on their device's screen size
-- See hover states for all interactive elements on the page
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/michalmiotla/Intro-section-with-dropdown-navigation)
+- Live Site URL: [Add live site URL here](https://michalmiotla.github.io/Intro-section-with-dropdown-navigation/)
 ### Built with
 
 - Semantic HTML5 markup
@@ -24,9 +17,6 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Mobile-first workflow
-
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
@@ -39,4 +29,4 @@ Users should be able to:
 Need to focus on more advanced javaScript, to improve my projects.
 ## Author
 
-- Frontend Mentor - [@michalmiotla](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@michalmiotla](https://www.frontendmentor.io/profile/michalmiotla)
