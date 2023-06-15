@@ -207,19 +207,21 @@ body {
 @media (min-width: 992px) {
 	.wrapper {
 		.logo-and-nav {
+			.burger-icon {
+				display: none;
+			}
+
+			.close {
+				display: none;
+			}
 
 			.logo-dev {
 				padding: 0.5em 1em;
-
-				.burger-icon {
-					opacity: 0;
-				}
 
 				.site-logo {
 					height: 1.5em;
 				}
 			}
-			
 		}
 
 		.mobile-navigation {

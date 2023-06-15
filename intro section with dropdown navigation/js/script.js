@@ -3,7 +3,7 @@ const closeBtn = document.querySelector('.close')
 const mobileNav = document.querySelector('.mobile-navigation')
 const featuresLink = document.querySelector('.features-link')
 const featuresDiv = document.querySelector('.features')
-const featuresIcon = document.querySelectorAll('.arrow-icon-features')
+const featuresIcon = document.querySelector('.arrow-icon-features')
 const companyIcon = document.querySelector('.arrow-icon-company')
 const iconRotate = document.querySelector('.icon-rotate')
 const companyLink = document.querySelector('.company-link')
@@ -36,6 +36,8 @@ const showFeatures = () => {
 	featuresDiv.style.display = 'flex'
 	featuresIcon.classList.add('icon-rotate')
 }
+
+
 
 const showCompany = () => {
 	companyDiv.style.display = 'flex'

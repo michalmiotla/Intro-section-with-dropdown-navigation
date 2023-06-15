@@ -176,11 +176,14 @@ body {
 }
 
 @media (min-width: 992px) {
+  .wrapper .logo-and-nav .burger-icon {
+    display: none;
+  }
+  .wrapper .logo-and-nav .close {
+    display: none;
+  }
   .wrapper .logo-and-nav .logo-dev {
     padding: 0.5em 1em;
-  }
-  .wrapper .logo-and-nav .logo-dev .burger-icon {
-    opacity: 0;
   }
   .wrapper .logo-and-nav .logo-dev .site-logo {
     height: 1.5em;
